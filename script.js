@@ -183,14 +183,6 @@
         gsap.ticker.add((time) => lenis.raf(time * 1000));
         gsap.ticker.lagSmoothing(0);
 
-        const marqueeContent = document.querySelector('.marquee-content');
-        if (marqueeContent) {
-            lenis.on('scroll', (e) => {
-                const speed = Math.min(Math.abs(e.velocity) * 0.1, 3);
-                marqueeContent.style.animationDuration = Math.max(10, 30 - speed * 8) + 's';
-            });
-        }
-
         return lenis;
     }
 

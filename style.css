@@ -510,7 +510,7 @@ img, video { max-width: 100%; display: block; }
     display: flex; align-items: center; gap: 40px;
     white-space: nowrap;
     will-change: transform;
-    animation: marqueeFlow 30s linear infinite;
+    animation: marqueeFlow 60s linear infinite;
 }
 .marquee-content span {
     font-family: var(--font-display);
