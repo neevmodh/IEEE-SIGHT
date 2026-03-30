@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events — IEEE SIGHT SGNU</title>
+    <meta name="description" content="Explore upcoming and past events by IEEE SIGHT SGNU — workshops, hackathons, and humanitarian tech summits.">
+    <link rel="icon" type="image/png" href="assets/sight-globe-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand magnetic" data-strength="15">
+            <img src="assets/sight-globe-favicon.png" alt="IEEE SIGHT" class="nav-logo">
+            <span class="brand-ieee">IEEE</span> SIGHT
+        </a>
+        <div class="nav-links">
+            <a href="index.html#about" class="nav-link magnetic link-hover" data-strength="20">About</a>
+            <a href="index.html#projects" class="nav-link magnetic link-hover" data-strength="20">Projects</a>
+            <a href="team.html" class="nav-link magnetic link-hover" data-strength="20">Team</a>
+            <a href="events.html" class="nav-link magnetic link-hover active" data-strength="20">Events</a>
+            <a href="contact.html" class="nav-link magnetic link-hover" data-strength="20">Contact</a>
+        </div>
+        <button class="nav-menu-btn magnetic" id="menuBtn" data-strength="20" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="index.html#about" class="mobile-link">About</a>
+            <a href="index.html#projects" class="mobile-link">Projects</a>
+            <a href="team.html" class="mobile-link">Team</a>
+            <a href="events.html" class="mobile-link">Events</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" id="eventsHero">
+        <canvas class="page-hero-canvas" id="pageCanvas"></canvas>
+        <div class="container">
+            <div class="page-hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                <span>What's Happening</span>
+            </div>
+            <h1 class="page-hero-title glitch-text" id="pageTitle" data-text="EVENTS">EVENTS</h1>
+            <p class="page-hero-sub reveal-up">Workshops, hackathons, and summits — where technology meets humanity.</p>
+        </div>
+    </section>
+
+    <!-- Event Countdown Banner -->
+    <section class="event-countdown-section">
+        <div class="container">
+            <div class="countdown-banner">
+                <div class="countdown-label">
+                    <span class="countdown-pulse"></span>
+                    <span>Next Event In</span>
+                </div>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cdDays">00</span>
+                        <span class="countdown-txt">Days</span>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cdHours">00</span>
+                        <span class="countdown-txt">Hours</span>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cdMins">00</span>
+                        <span class="countdown-txt">Mins</span>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-num" id="cdSecs">00</span>
+                        <span class="countdown-txt">Secs</span>
+                    </div>
+                </div>
+                <h3 class="countdown-event-name">Photonic Sensors — Expert Session</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events-section">
+        <div class="container">
+            <div class="events-group">
+                <div class="team-group-header">
+                    <span class="group-number">↗</span>
+                    <h2 class="group-title">Upcoming</h2>
+                    <div class="group-line"></div>
+                </div>
+
+                <div class="event-list">
+                    <article class="event-item featured-event" data-tilt>
+                        <div class="event-date">
+                            <span class="event-day">27</span>
+                            <span class="event-month">MAR</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-featured-badge">Featured</div>
+                            <h3 class="event-title">Photonic Sensors as a Sustainable Technology for Humanitarian Solutions</h3>
+                            <p class="event-desc">Expert session exploring scalable, low-cost light-based sensing for water purification, medical diagnostics, and disaster response applications.</p>
+                            <div class="event-meta">
+                                <span class="event-tag">Expert Session</span>
+                                <span class="event-location">📍 N Block, Nirma University</span>
+                                <span class="event-time">🕓 4:00 PM – 6:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="event-cta">
+                            <a href="#" class="btn btn-primary magnetic" data-strength="20">
+                                <span class="btn-text">Details</span>
+                                <span class="btn-icon">→</span>
+                                <div class="btn-fill"></div>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-item" data-tilt>
+                        <div class="event-date">
+                            <span class="event-day">28</span>
+                            <span class="event-month">APR</span>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-title">HackForGood — 36hr Hackathon</h3>
+                            <p class="event-desc">Build solutions for real-world humanitarian challenges. Open to all disciplines. Prizes, mentorship, and networking with industry leaders.</p>
+                            <div class="event-meta">
+                                <span class="event-tag tag-hackathon">Hackathon</span>
+                                <span class="event-location">📍 Innovation Lab, Block C</span>
+                            </div>
+                        </div>
+                        <div class="event-cta">
+                            <a href="#" class="btn btn-ghost magnetic" data-strength="20">
+                                <span class="btn-text">Register</span>
+                                <span class="btn-icon">→</span>
+                                <div class="btn-fill"></div>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-item" data-tilt>
+                        <div class="event-date">
+                            <span class="event-day">10</span>
+                            <span class="event-month">MAY</span>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-title">AI for Social Good Workshop</h3>
+                            <p class="event-desc">Hands-on workshop on applying machine learning for disaster prediction, healthcare accessibility, and resource optimization.</p>
+                            <div class="event-meta">
+                                <span class="event-tag tag-workshop">Workshop</span>
+                                <span class="event-location">📍 CS Lab 301</span>
+                            </div>
+                        </div>
+                        <div class="event-cta">
+                            <a href="#" class="btn btn-ghost magnetic" data-strength="20">
+                                <span class="btn-text">Register</span>
+                                <span class="btn-icon">→</span>
+                                <div class="btn-fill"></div>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-item" data-tilt>
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">JUN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-title">Sustainable Tech Summit 2026</h3>
+                            <p class="event-desc">Annual summit bringing together students, industry professionals, and NGOs to discuss scalable humanitarian technology solutions.</p>
+                            <div class="event-meta">
+                                <span class="event-tag tag-summit">Summit</span>
+                                <span class="event-location">📍 Main Auditorium, Nirma University</span>
+                            </div>
+                        </div>
+                        <div class="event-cta">
+                            <a href="#" class="btn btn-ghost magnetic" data-strength="20">
+                                <span class="btn-text">Learn More</span>
+                                <span class="btn-icon">→</span>
+                                <div class="btn-fill"></div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Past Events -->
+            <div class="events-group">
+                <div class="team-group-header">
+                    <span class="group-number">◆</span>
+                    <h2 class="group-title">Past Events</h2>
+                    <div class="group-line"></div>
+                </div>
+
+                <div class="event-list past-events">
+                    <article class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">20</span>
+                            <span class="event-month">FEB</span>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-title">Clean Water Technology Symposium</h3>
+                            <p class="event-desc">Exploring IoT-based water quality monitoring and low-cost purification solutions deployed in rural Gujarat.</p>
+                            <div class="event-meta">
+                                <span class="event-tag">Symposium</span>
+                                <span class="event-location">📍 Nirma University</span>
+                            </div>
+                            <div class="event-stats">
+                                <span class="es-item">👥 200+ Attendees</span>
+                                <span class="es-item">🎤 8 Speakers</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">05</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-title">Women in STEM — Panel Discussion</h3>
+                            <p class="event-desc">Industry leaders shared insights on closing the gender gap in technology and engineering fields.</p>
+                            <div class="event-meta">
+                                <span class="event-tag">Panel</span>
+                                <span class="event-location">📍 Main Seminar Hall</span>
+                            </div>
+                            <div class="event-stats">
+                                <span class="es-item">👥 150+ Attendees</span>
+                                <span class="es-item">🎤 5 Panelists</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">12</span>
+                            <span class="event-month">DEC</span>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-title">Smart Village Initiative Launch</h3>
+                            <p class="event-desc">Inauguration of SIGHT's flagship project deploying solar-powered digital kiosks in 5 villages near Ahmedabad.</p>
+                            <div class="event-meta">
+                                <span class="event-tag">Launch</span>
+                                <span class="event-location">📍 Sanand Village Cluster</span>
+                            </div>
+                            <div class="event-stats">
+                                <span class="es-item">🌍 5 Villages</span>
+                                <span class="es-item">⚡ 2000+ Impacted</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Stats -->
+    <section class="events-impact-strip">
+        <div class="container">
+            <div class="impact-strip-inner">
+                <div class="impact-strip-item">
+                    <span class="isi-num" data-count="12">0</span>
+                    <span class="isi-label">Events Hosted</span>
+                </div>
+                <div class="impact-strip-item">
+                    <span class="isi-num" data-count="500">0</span><span class="isi-plus">+</span>
+                    <span class="isi-label">Total Attendees</span>
+                </div>
+                <div class="impact-strip-item">
+                    <span class="isi-num" data-count="30">0</span><span class="isi-plus">+</span>
+                    <span class="isi-label">Expert Speakers</span>
+                </div>
+                <div class="impact-strip-item">
+                    <span class="isi-num" data-count="5">0</span>
+                    <span class="isi-label">Hackathons Won</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <div class="container cta-inner">
+            <h2 class="cta-heading split-reveal">Have an event<br>idea?</h2>
+            <div class="cta-buttons">
+                <a href="mailto:sharmaarnav24524@gmail.com" class="btn btn-primary magnetic" data-strength="25">
+                    <span class="btn-text">Propose an Event</span>
+                    <span class="btn-icon">→</span>
+                    <div class="btn-fill"></div>
+                </a>
+                <a href="contact.html" class="btn btn-ghost magnetic" data-strength="25">
+                    <span class="btn-text">Contact Us</span>
+                    <span class="btn-icon">→</span>
+                    <div class="btn-fill"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-glow-line"></div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 IEEE SIGHT SGNU. All rights reserved.</p>
+                <p class="footer-credit">Crafted for Impact</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="script.js"></script>
+</body>
+</html>

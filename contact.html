@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — IEEE SIGHT SGNU</title>
+    <meta name="description" content="Get in touch with IEEE SIGHT SGNU. Located at N Block, Nirma University, Ahmedabad, Gujarat, India.">
+    <link rel="icon" type="image/png" href="assets/sight-globe-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand magnetic" data-strength="15">
+            <img src="assets/sight-globe-favicon.png" alt="IEEE SIGHT" class="nav-logo">
+            <span class="brand-ieee">IEEE</span> SIGHT
+        </a>
+        <div class="nav-links">
+            <a href="index.html#about" class="nav-link magnetic link-hover" data-strength="20">About</a>
+            <a href="index.html#projects" class="nav-link magnetic link-hover" data-strength="20">Projects</a>
+            <a href="team.html" class="nav-link magnetic link-hover" data-strength="20">Team</a>
+            <a href="events.html" class="nav-link magnetic link-hover" data-strength="20">Events</a>
+            <a href="contact.html" class="nav-link magnetic link-hover active" data-strength="20">Contact</a>
+        </div>
+        <button class="nav-menu-btn magnetic" id="menuBtn" data-strength="20" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="index.html#about" class="mobile-link">About</a>
+            <a href="index.html#projects" class="mobile-link">Projects</a>
+            <a href="team.html" class="mobile-link">Team</a>
+            <a href="events.html" class="mobile-link">Events</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-badge">
+                <span class="badge-dot"></span>
+                <span>Get In Touch</span>
+            </div>
+            <h1 class="page-hero-title" id="pageTitle">CONTACT</h1>
+            <p class="page-hero-sub">Ready to collaborate? Reach out and let's engineer a better future together.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="contact-form-title">Send us a Message</h2>
+                    <form class="contact-form" id="contactForm" onsubmit="return handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Name</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="Your name" required>
+                                <div class="form-underline"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Email</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" required>
+                                <div class="form-underline"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-input" placeholder="What's this about?" required>
+                            <div class="form-underline"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-input form-textarea" placeholder="Tell us about your idea..." rows="5" required></textarea>
+                            <div class="form-underline"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary magnetic" data-strength="25" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                            <div class="btn-fill"></div>
+                        </button>
+                    </form>
+                    <p class="form-success" id="formSuccess" style="display:none;">✅ Message sent! We'll get back to you soon.</p>
+                </div>
+
+                <!-- Contact Info Cards -->
+                <div class="contact-info-col">
+                    <div class="contact-info-card">
+                        <div class="cic-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="cic-content">
+                            <h3>Location</h3>
+                            <p>N Block, Nirma University</p>
+                            <p>Ahmedabad, Gujarat, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="cic-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+                            </svg>
+                        </div>
+                        <div class="cic-content">
+                            <h3>Email</h3>
+                            <a href="mailto:sharmaarnav24524@gmail.com" class="link-hover">sharmaarnav24524@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="cic-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="cic-content">
+                            <h3>Phone</h3>
+                            <a href="tel:+918209924524" class="link-hover">+91 82099 24524</a>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7530243647936!2d72.50170547602385!3d23.00415361723454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b2b1eab0e6b%3A0xfab9d6ef67c2e1a9!2sNirma%20University!5e0!3m2!1sen!2sin!4v1711900000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="200" 
+                            style="border:0; border-radius: 12px; opacity: 0.8;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Nirma University Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow-line"></div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 IEEE SIGHT SGNU. All rights reserved.</p>
+                <p class="footer-credit">Crafted for Impact</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="script.js"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const form = document.getElementById('contactForm');
+            const success = document.getElementById('formSuccess');
+            
+            btn.querySelector('.btn-text').textContent = 'Sending...';
+            
+            // Simulate send
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.style.display = 'block';
+                gsap.from(success, { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' });
+            }, 1200);
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team — IEEE SIGHT SGNU</title>
+    <meta name="description" content="Meet the team behind IEEE SIGHT SGNU — driving humanitarian technology innovation at Nirma University, Ahmedabad.">
+    <link rel="icon" type="image/png" href="assets/sight-globe-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand magnetic" data-strength="15">
+            <img src="assets/sight-globe-favicon.png" alt="IEEE SIGHT" class="nav-logo">
+            <span class="brand-ieee">IEEE</span> SIGHT
+        </a>
+        <div class="nav-links">
+            <a href="index.html#about" class="nav-link magnetic link-hover" data-strength="20">About</a>
+            <a href="index.html#projects" class="nav-link magnetic link-hover" data-strength="20">Projects</a>
+            <a href="team.html" class="nav-link magnetic link-hover active" data-strength="20">Team</a>
+            <a href="events.html" class="nav-link magnetic link-hover" data-strength="20">Events</a>
+            <a href="contact.html" class="nav-link magnetic link-hover" data-strength="20">Contact</a>
+        </div>
+        <button class="nav-menu-btn magnetic" id="menuBtn" data-strength="20" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="index.html#about" class="mobile-link">About</a>
+            <a href="index.html#projects" class="mobile-link">Projects</a>
+            <a href="team.html" class="mobile-link">Team</a>
+            <a href="events.html" class="mobile-link">Events</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Page Hero with Particle Canvas -->
+    <section class="page-hero" id="teamHero">
+        <canvas class="page-hero-canvas" id="pageCanvas"></canvas>
+        <div class="container">
+            <div class="page-hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                <span>Our People</span>
+            </div>
+            <h1 class="page-hero-title glitch-text" id="pageTitle" data-text="THE TEAM">THE TEAM</h1>
+            <p class="page-hero-sub reveal-up">The brilliant minds driving humanitarian impact through technology at Nirma University.</p>
+        </div>
+    </section>
+
+    <!-- Team Stats Banner -->
+    <section class="team-stats-banner">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-pill">
+                    <span class="stat-num" data-count="14">0</span>
+                    <span class="stat-label">Team Members</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-pill">
+                    <span class="stat-num" data-count="6">0</span>
+                    <span class="stat-label">Departments</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-pill">
+                    <span class="stat-num" data-count="1">0</span>
+                    <span class="stat-label">Unified Vision</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee-section team-marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>LEADERSHIP</span><span class="marquee-dot">◆</span>
+                <span>INNOVATION</span><span class="marquee-dot">◆</span>
+                <span>TECHNOLOGY</span><span class="marquee-dot">◆</span>
+                <span>HUMANITY</span><span class="marquee-dot">◆</span>
+                <span>IMPACT</span><span class="marquee-dot">◆</span>
+                <span>COLLABORATION</span><span class="marquee-dot">◆</span>
+                <span>LEADERSHIP</span><span class="marquee-dot">◆</span>
+                <span>INNOVATION</span><span class="marquee-dot">◆</span>
+                <span>TECHNOLOGY</span><span class="marquee-dot">◆</span>
+                <span>HUMANITY</span><span class="marquee-dot">◆</span>
+                <span>IMPACT</span><span class="marquee-dot">◆</span>
+                <span>COLLABORATION</span><span class="marquee-dot">◆</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Content -->
+    <section class="team-page-content">
+        <div class="container">
+
+            <!-- Leadership -->
+            <div class="team-group-block" data-group="leadership">
+                <div class="team-group-header">
+                    <span class="group-number">01</span>
+                    <h2 class="group-title">Leadership</h2>
+                    <div class="group-line"></div>
+                </div>
+                <div class="team-page-grid cols-2">
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/arnav-sharma.jpg" alt="Arnav Sharma" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Arnav Sharma</h3>
+                            <p class="tpc-role">Chairperson</p>
+                            <p class="tpc-desc">Leading strategic vision and organizational growth for IEEE SIGHT SGNU.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Strategy</span>
+                                <span class="tpc-tag">Vision</span>
+                            </div>
+                            <a href="https://www.linkedin.com/in/arnav-sharma-b153952a0" target="_blank" class="tpc-social link-hover">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/dhruv.jpg" alt="Dhruv Odedara" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Dhruv Odedara</h3>
+                            <p class="tpc-role">Vice Chairperson</p>
+                            <p class="tpc-desc">Overseeing operations and driving community engagement initiatives.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Operations</span>
+                                <span class="tpc-tag">Community</span>
+                            </div>
+                            <a href="https://www.linkedin.com/in/dhruv-odedara-89a940349" target="_blank" class="tpc-social link-hover">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secretariats -->
+            <div class="team-group-block" data-group="secretariats">
+                <div class="team-group-header">
+                    <span class="group-number">02</span>
+                    <h2 class="group-title">Secretariats</h2>
+                    <div class="group-line"></div>
+                </div>
+                <div class="team-page-grid cols-2">
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/jiya.jpg" alt="Jiya Parmar" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Jiya Parmar</h3>
+                            <p class="tpc-role">General Secretary</p>
+                            <p class="tpc-desc">Managing internal operations and organizational communication.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Administration</span>
+                                <span class="tpc-tag">Communication</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/vanshvi.jpg" alt="Vanshvi Hirani" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Vanshvi Hirani</h3>
+                            <p class="tpc-role">Joint Secretary</p>
+                            <p class="tpc-desc">Supporting administrative coordination and event management.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Coordination</span>
+                                <span class="tpc-tag">Events</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Team -->
+            <div class="team-group-block" data-group="core">
+                <div class="team-group-header">
+                    <span class="group-number">03</span>
+                    <h2 class="group-title">Core Team</h2>
+                    <div class="group-line"></div>
+                </div>
+                <div class="team-page-grid cols-3">
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/vaidehi.jpg" alt="Vaidehi Vora" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Vaidehi Vora</h3>
+                            <p class="tpc-role">Treasurer</p>
+                            <p class="tpc-desc">Managing finances and budget allocation for all projects and events.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Finance</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/tanisha.jpg" alt="Tanisha Shah" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Tanisha Shah</h3>
+                            <p class="tpc-role">Project Coordinator</p>
+                            <p class="tpc-desc">Coordinating project execution and timeline management across teams.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Projects</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/manthan.jpg" alt="Manthan Murdia" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Manthan Murdia</h3>
+                            <p class="tpc-role">Logistics Head</p>
+                            <p class="tpc-desc">Handling event logistics, venue management, and resource coordination.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Logistics</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Division -->
+            <div class="team-group-block" data-group="tech">
+                <div class="team-group-header">
+                    <span class="group-number">04</span>
+                    <h2 class="group-title">Tech Division</h2>
+                    <div class="group-line"></div>
+                </div>
+                <div class="team-page-grid cols-2">
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/anuj.jpg" alt="Anuj Saha" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Anuj Saha</h3>
+                            <p class="tpc-role">Technical Head</p>
+                            <p class="tpc-desc">Architecting scalable solutions for humanitarian tech products and platforms.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Engineering</span>
+                                <span class="tpc-tag">Architecture</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/devanshi.jpg" alt="Devanshi Shah" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Devanshi Shah</h3>
+                            <p class="tpc-role">Technical Head</p>
+                            <p class="tpc-desc">Developing intelligent systems for community-focused technology solutions.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">AI / ML</span>
+                                <span class="tpc-tag">Systems</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content & Marketing -->
+            <div class="team-group-block" data-group="content">
+                <div class="team-group-header">
+                    <span class="group-number">05</span>
+                    <h2 class="group-title">Content & Marketing</h2>
+                    <div class="group-line"></div>
+                </div>
+                <div class="team-page-grid cols-3">
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/gargee.jpg" alt="Gargee Vyas" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Gargee Vyas</h3>
+                            <p class="tpc-role">Content Head</p>
+                            <p class="tpc-desc">Crafting compelling narratives and content strategies for outreach.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Content</span>
+                                <span class="tpc-tag">Strategy</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/divy.jpg" alt="Divy Prajapati" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Divy Prajapati</h3>
+                            <p class="tpc-role">Social Media Head</p>
+                            <p class="tpc-desc">Managing digital presence and community engagement across platforms.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Social</span>
+                                <span class="tpc-tag">Digital</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/poojan.jpg" alt="Poojan Oza" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Poojan Oza</h3>
+                            <p class="tpc-role">Membership & Sponsorship</p>
+                            <p class="tpc-desc">Building partnerships and driving membership growth for the chapter.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Partnerships</span>
+                                <span class="tpc-tag">Growth</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative Team -->
+            <div class="team-group-block" data-group="creative">
+                <div class="team-group-header">
+                    <span class="group-number">06</span>
+                    <h2 class="group-title">Creative</h2>
+                    <div class="group-line"></div>
+                </div>
+                <div class="team-page-grid cols-2">
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/naitri.jpg" alt="Naitri Patel" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Naitri Patel</h3>
+                            <p class="tpc-role">Creative Head</p>
+                            <p class="tpc-desc">Crafting visual identity and design systems across all touchpoints.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Design</span>
+                                <span class="tpc-tag">Branding</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="team-page-card" data-tilt>
+                        <div class="tpc-avatar has-photo">
+                            <img src="assets/team/kanak-agrawal-v2.jpg" alt="Kanak Agrawal" loading="lazy">
+                        </div>
+                        <div class="tpc-info">
+                            <h3>Kanak Agrawal</h3>
+                            <p class="tpc-role">Creative Head</p>
+                            <p class="tpc-desc">Bringing stories to life through creative direction and visual narratives.</p>
+                            <div class="tpc-tags">
+                                <span class="tpc-tag">Visual</span>
+                                <span class="tpc-tag">Narrative</span>
+                            </div>
+                        </div>
+                        <div class="tpc-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="team-quote-section">
+        <div class="container">
+            <div class="team-quote-block">
+                <div class="quote-mark">"</div>
+                <blockquote class="team-quote split-reveal">
+                    Together, we don't just build technology — we build hope, opportunity, and change for communities that need it most.
+                </blockquote>
+                <cite class="quote-cite">— IEEE SIGHT SGNU Team</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join CTA -->
+    <section class="cta-band">
+        <div class="container cta-inner">
+            <h2 class="cta-heading split-reveal">Want to join<br>the team?</h2>
+            <div class="cta-buttons">
+                <a href="mailto:sharmaarnav24524@gmail.com" class="btn btn-primary magnetic" data-strength="25">
+                    <span class="btn-text">Get In Touch</span>
+                    <span class="btn-icon">→</span>
+                    <div class="btn-fill"></div>
+                </a>
+                <a href="contact.html" class="btn btn-ghost magnetic" data-strength="25">
+                    <span class="btn-text">Contact Page</span>
+                    <span class="btn-icon">→</span>
+                    <div class="btn-fill"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-glow-line"></div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 IEEE SIGHT SGNU. All rights reserved.</p>
+                <p class="footer-credit">Crafted for Impact</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="script.js"></script>
+</body>
+</html>
